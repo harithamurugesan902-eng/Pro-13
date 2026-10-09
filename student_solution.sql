@@ -1,7 +1,5 @@
 CREATE DATABASE CollegeDB;
-USE CollegeDB;
-
--- Department table
+USE College;
 CREATE TABLE Department (
     DepartmentID INT PRIMARY KEY,
     DepartmentName VARCHAR(100) NOT NULL
@@ -83,4 +81,3 @@ JOIN StudentCourse sc ON s.StudentID = sc.StudentID
 JOIN Course c ON sc.CourseID = c.CourseID
 JOIN Faculty f ON c.FacultyID = f.FacultyID
 JOIN Department d ON f.DepartmentID = d.DepartmentID;
-
